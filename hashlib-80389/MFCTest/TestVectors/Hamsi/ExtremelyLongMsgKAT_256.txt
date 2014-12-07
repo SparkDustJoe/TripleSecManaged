@@ -1,0 +1,10 @@
+# ExtremelyLongMsgKAT_256.txt
+# Algorithm Name: Hamsi
+# Principal Submitter: Özgül Küçük
+
+Repeat = 16777216
+Text = abcdefghbcdefghicdefghijdefghijkefghijklfghijklmghijklmnhijklmno
+MD = D3CD9FA5576C0CA65D008D0F5B510D307A1A1A393FFAA736700457143DBBDE0E
+Repeat = 67108865
+Text = abcdefghbcdefghicdefghijdefghijkefghijklfghijklmghijklmnhijklmno
+MD = 46DF78AEDB3CF1E384288A571A1B21D1B5C2B324B6EFF1C091C17F29B914D09E

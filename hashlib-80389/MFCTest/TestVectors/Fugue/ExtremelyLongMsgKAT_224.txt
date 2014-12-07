@@ -1,0 +1,10 @@
+# KAT_MCT/ExtremelyLongMsgKAT_224.txt
+# Algorithm Name: Fugue
+# Principal Submitter: Charanjit S. Jutla
+
+Repeat = 16777216
+Text = abcdefghbcdefghicdefghijdefghijkefghijklfghijklmghijklmnhijklmno
+MD = B8B58AB015BC59B0FA0D8FAD9165E91DF6764B1CA17CB52BB209576B
+Repeat = 67108865
+Text = abcdefghbcdefghicdefghijdefghijkefghijklfghijklmghijklmnhijklmno
+MD = B29F294E768BD1C7B9B44173167EE7FBC48C2387E94C3DCEBEF21DCF

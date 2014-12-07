@@ -1,0 +1,307 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="Stopwatch.h" />
+    <ClInclude Include="BlakeTest.h">
+      <Filter>Blake</Filter>
+    </ClInclude>
+    <ClInclude Include="Blake-org.h">
+      <Filter>Blake</Filter>
+    </ClInclude>
+    <ClInclude Include="Blake.h">
+      <Filter>Blake</Filter>
+    </ClInclude>
+    <ClInclude Include="BlueMidnightWishTest.h">
+      <Filter>BlueMidnightWish</Filter>
+    </ClInclude>
+    <ClInclude Include="BlueMidnightWish-org.h">
+      <Filter>BlueMidnightWish</Filter>
+    </ClInclude>
+    <ClInclude Include="BlueMidnightWish.h">
+      <Filter>BlueMidnightWish</Filter>
+    </ClInclude>
+    <ClInclude Include="CubeHashTest.h">
+      <Filter>CubeHash</Filter>
+    </ClInclude>
+    <ClInclude Include="CubeHash-org.h">
+      <Filter>CubeHash</Filter>
+    </ClInclude>
+    <ClInclude Include="CubeHash.h">
+      <Filter>CubeHash</Filter>
+    </ClInclude>
+    <ClInclude Include="EchoTest.h">
+      <Filter>Echo</Filter>
+    </ClInclude>
+    <ClInclude Include="Echo-org.h">
+      <Filter>Echo</Filter>
+    </ClInclude>
+    <ClInclude Include="Echo.h">
+      <Filter>Echo</Filter>
+    </ClInclude>
+    <ClInclude Include="Fugue.h">
+      <Filter>Fugue</Filter>
+    </ClInclude>
+    <ClInclude Include="Fugue-org.h">
+      <Filter>Fugue</Filter>
+    </ClInclude>
+    <ClInclude Include="FugueTest.h">
+      <Filter>Fugue</Filter>
+    </ClInclude>
+    <ClInclude Include="GroestlTest.h">
+      <Filter>Groestl</Filter>
+    </ClInclude>
+    <ClInclude Include="Groestl.h">
+      <Filter>Groestl</Filter>
+    </ClInclude>
+    <ClInclude Include="Hamsi-org.h">
+      <Filter>Hamsi</Filter>
+    </ClInclude>
+    <ClInclude Include="HamsiTest.h">
+      <Filter>Hamsi</Filter>
+    </ClInclude>
+    <ClInclude Include="Hamsi.h">
+      <Filter>Hamsi</Filter>
+    </ClInclude>
+    <ClInclude Include="JH-org.h">
+      <Filter>JH</Filter>
+    </ClInclude>
+    <ClInclude Include="JHTest.h">
+      <Filter>JH</Filter>
+    </ClInclude>
+    <ClInclude Include="JH.h">
+      <Filter>JH</Filter>
+    </ClInclude>
+    <ClInclude Include="Luffa-org.h">
+      <Filter>Luffa</Filter>
+    </ClInclude>
+    <ClInclude Include="Luffa.h">
+      <Filter>Luffa</Filter>
+    </ClInclude>
+    <ClInclude Include="LuffaTest.h">
+      <Filter>Luffa</Filter>
+    </ClInclude>
+    <ClInclude Include="ShabalTest.h">
+      <Filter>Shabal</Filter>
+    </ClInclude>
+    <ClInclude Include="Shabal-org.h">
+      <Filter>Shabal</Filter>
+    </ClInclude>
+    <ClInclude Include="Shabal.h">
+      <Filter>Shabal</Filter>
+    </ClInclude>
+    <ClInclude Include="SHAvite3Test.h">
+      <Filter>SHAvite3</Filter>
+    </ClInclude>
+    <ClInclude Include="SHAvite3.h">
+      <Filter>SHAvite3</Filter>
+    </ClInclude>
+    <ClInclude Include="SIMDTest.h">
+      <Filter>SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="SIMD-org.h">
+      <Filter>SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="SIMD.h">
+      <Filter>SIMD</Filter>
+    </ClInclude>
+    <ClInclude Include="SkeinTest.h">
+      <Filter>Skein</Filter>
+    </ClInclude>
+    <ClInclude Include="Skein-org.h">
+      <Filter>Skein</Filter>
+    </ClInclude>
+    <ClInclude Include="SHAvite3-org.h">
+      <Filter>SHAvite3</Filter>
+    </ClInclude>
+    <ClInclude Include="Groestl-org.h">
+      <Filter>Groestl</Filter>
+    </ClInclude>
+    <ClInclude Include="KeccakTest.h">
+      <Filter>Keccak</Filter>
+    </ClInclude>
+    <ClInclude Include="Keccak.h">
+      <Filter>Keccak</Filter>
+    </ClInclude>
+    <ClInclude Include="Keccak-org.h">
+      <Filter>Keccak</Filter>
+    </ClInclude>
+    <ClInclude Include="Skein.h">
+      <Filter>Skein</Filter>
+    </ClInclude>
+    <ClInclude Include="SipHashTest.h">
+      <Filter>SipHash</Filter>
+    </ClInclude>
+    <ClInclude Include="SipHash.h">
+      <Filter>SipHash</Filter>
+    </ClInclude>
+    <ClInclude Include="TestBaseNonCryptoWithKey.h" />
+    <ClInclude Include="TestBaseCrypto.h" />
+    <ClInclude Include="TestBase.h" />
+    <ClInclude Include="SipHashOrg.h">
+      <Filter>SipHash</Filter>
+    </ClInclude>
+    <ClInclude Include="Murmur3Test.h">
+      <Filter>Murmur3</Filter>
+    </ClInclude>
+    <ClInclude Include="Murmur3-org.h">
+      <Filter>Murmur3</Filter>
+    </ClInclude>
+    <ClInclude Include="TestBaseNonCryptoNonBlock.h" />
+    <ClInclude Include="TestBaseBlock.h" />
+    <ClInclude Include="Murmur3.h">
+      <Filter>Murmur3</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Blake-org.cpp">
+      <Filter>Blake</Filter>
+    </ClCompile>
+    <ClCompile Include="Blake.cpp">
+      <Filter>Blake</Filter>
+    </ClCompile>
+    <ClCompile Include="BlueMidnightWish-org.cpp">
+      <Filter>BlueMidnightWish</Filter>
+    </ClCompile>
+    <ClCompile Include="BlueMidnightWish.cpp">
+      <Filter>BlueMidnightWish</Filter>
+    </ClCompile>
+    <ClCompile Include="CubeHash-org.cpp">
+      <Filter>CubeHash</Filter>
+    </ClCompile>
+    <ClCompile Include="CubeHash.cpp">
+      <Filter>CubeHash</Filter>
+    </ClCompile>
+    <ClCompile Include="Echo-org.cpp">
+      <Filter>Echo</Filter>
+    </ClCompile>
+    <ClCompile Include="Echo.cpp">
+      <Filter>Echo</Filter>
+    </ClCompile>
+    <ClCompile Include="Fugue-org.cpp">
+      <Filter>Fugue</Filter>
+    </ClCompile>
+    <ClCompile Include="Fugue.cpp">
+      <Filter>Fugue</Filter>
+    </ClCompile>
+    <ClCompile Include="Fugue256.cpp">
+      <Filter>Fugue</Filter>
+    </ClCompile>
+    <ClCompile Include="Fugue384.cpp">
+      <Filter>Fugue</Filter>
+    </ClCompile>
+    <ClCompile Include="Fugue512.cpp">
+      <Filter>Fugue</Filter>
+    </ClCompile>
+    <ClCompile Include="Groestl.cpp">
+      <Filter>Groestl</Filter>
+    </ClCompile>
+    <ClCompile Include="Hamsi-org.cpp">
+      <Filter>Hamsi</Filter>
+    </ClCompile>
+    <ClCompile Include="Hamsi.cpp">
+      <Filter>Hamsi</Filter>
+    </ClCompile>
+    <ClCompile Include="Luffa-org.cpp">
+      <Filter>Luffa</Filter>
+    </ClCompile>
+    <ClCompile Include="Luffa.cpp">
+      <Filter>Luffa</Filter>
+    </ClCompile>
+    <ClCompile Include="Shabal-org.cpp">
+      <Filter>Shabal</Filter>
+    </ClCompile>
+    <ClCompile Include="Shabal.cpp">
+      <Filter>Shabal</Filter>
+    </ClCompile>
+    <ClCompile Include="SHAvite3.cpp">
+      <Filter>SHAvite3</Filter>
+    </ClCompile>
+    <ClCompile Include="SIMD-org.cpp">
+      <Filter>SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="SIMD.cpp">
+      <Filter>SIMD</Filter>
+    </ClCompile>
+    <ClCompile Include="Skein-org.cpp">
+      <Filter>Skein</Filter>
+    </ClCompile>
+    <ClCompile Include="SHAvite3-org.cpp">
+      <Filter>SHAvite3</Filter>
+    </ClCompile>
+    <ClCompile Include="Groestl-org.cpp">
+      <Filter>Groestl</Filter>
+    </ClCompile>
+    <ClCompile Include="Keccak.cpp">
+      <Filter>Keccak</Filter>
+    </ClCompile>
+    <ClCompile Include="Keccak-org.cpp">
+      <Filter>Keccak</Filter>
+    </ClCompile>
+    <ClCompile Include="Skein.cpp">
+      <Filter>Skein</Filter>
+    </ClCompile>
+    <ClCompile Include="MFCTest.cpp" />
+    <ClCompile Include="Murmur3-org.cpp">
+      <Filter>Murmur3</Filter>
+    </ClCompile>
+    <ClCompile Include="Murmur3.cpp">
+      <Filter>Murmur3</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="SHAvite3">
+      <UniqueIdentifier>{68121015-83f2-476c-8c18-1fac63c2bb92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Blake">
+      <UniqueIdentifier>{cc4b2f12-b6d5-4d42-9d72-b403530160be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BlueMidnightWish">
+      <UniqueIdentifier>{d66bbc0b-05a3-4a8a-a94c-136ba067d6b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="CubeHash">
+      <UniqueIdentifier>{d679942b-eda2-4a94-b58f-8c0c2328360f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Echo">
+      <UniqueIdentifier>{a9436e48-ce40-4388-987d-9bb4f39e4632}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fugue">
+      <UniqueIdentifier>{a121c9f0-dc88-448a-8f03-a78b1294d9a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Groestl">
+      <UniqueIdentifier>{acd54338-dbea-480b-bb6c-7c44a311efd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Hamsi">
+      <UniqueIdentifier>{bb793166-7069-4d55-8756-b2958c960671}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JH">
+      <UniqueIdentifier>{aafeb2ad-be97-43f1-be5f-3580163af183}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Keccak">
+      <UniqueIdentifier>{32b7489f-0b94-419a-b28e-2e4e2480e5ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Luffa">
+      <UniqueIdentifier>{3bd244b2-2b54-4da5-af6c-2f7866c4b2f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shabal">
+      <UniqueIdentifier>{70a705b2-17bb-46f9-8515-40c0cd1b735f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SIMD">
+      <UniqueIdentifier>{b9103519-2b3b-4d34-a97f-9deff7334879}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Skein">
+      <UniqueIdentifier>{5c7c45a1-cb82-460f-8344-951fef379cb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SipHash">
+      <UniqueIdentifier>{5fa58b4f-6ab1-48e0-b689-6c3ff432f0ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Murmur3">
+      <UniqueIdentifier>{d8bd5f64-ccf7-41b2-84b6-e7b5787ee6d0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,10 @@
+# ExtremelyLongMsgKAT_384.txt
+# Algorithm Name: Skein
+# Principal Submitter: Bruce Schneier
+
+Repeat = 16777216
+Text = abcdefghbcdefghicdefghijdefghijkefghijklfghijklmghijklmnhijklmno
+MD = 896FE24B39B9B234DE300A9C05902B410465F62BF20F97A8123130BEF6993F3D6CE04100FC0A5482254D29EAB245C145
+Repeat = 67108865
+Text = abcdefghbcdefghicdefghijdefghijkefghijklfghijklmghijklmnhijklmno
+MD = 33684FBFD369950E6E73FF43485D4E99440D19CFAB0217860D985BC0D71CECE1386BEF5640595061DB71B768F25FE270

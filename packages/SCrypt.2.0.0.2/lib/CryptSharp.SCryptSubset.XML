@@ -1,0 +1,214 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CryptSharp.SCryptSubset</name>
+    </assembly>
+    <members>
+        <member name="T:CryptSharp.Utility.SCrypt">
+            <summary>
+            Implements the SCrypt key derivation function.
+            </summary>
+        </member>
+        <member name="M:CryptSharp.Utility.SCrypt.ComputeDerivedKey(System.Byte[],System.Byte[],System.Int32,System.Int32,System.Int32,System.Nullable{System.Int32},System.Int32)">
+            <summary>
+            Computes a derived key.
+            </summary>
+            <param name="key">The key to derive from.</param>
+            <param name="salt">
+                The salt.
+                A unique salt means a unique SCrypt stream, even if the original key is identical.
+            </param>
+            <param name="cost">
+                The cost parameter, typically a fairly large number such as 262144.
+                Memory usage and CPU time scale approximately linearly with this parameter.
+            </param>
+            <param name="blockSize">
+                The mixing block size, typically 8.
+                Memory usage and CPU time scale approximately linearly with this parameter.
+            </param>
+            <param name="parallel">
+                The level of parallelism, typically 1.
+                CPU time scales approximately linearly with this parameter.
+            </param>
+            <param name="maxThreads">
+                The maximum number of threads to spawn to derive the key.
+                This is limited by the <paramref name="parallel"/> value.
+                <c>null</c> will use as many threads as possible.
+            </param>
+            <param name="derivedKeyLength">The desired length of the derived key.</param>
+            <returns>The derived key.</returns>
+        </member>
+        <member name="M:CryptSharp.Utility.SCrypt.GetEffectivePbkdf2Salt(System.Byte[],System.Byte[],System.Int32,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            The SCrypt algorithm creates a salt which it then uses as a one-iteration
+            PBKDF2 key stream with SHA256 HMAC. This method lets you retrieve this intermediate salt.
+            </summary>
+            <param name="key">The key to derive from.</param>
+            <param name="salt">
+                The salt.
+                A unique salt means a unique SCrypt stream, even if the original key is identical.
+            </param>
+            <param name="cost">
+                The cost parameter, typically a fairly large number such as 262144.
+                Memory usage and CPU time scale approximately linearly with this parameter.
+            </param>
+            <param name="blockSize">
+                The mixing block size, typically 8.
+                Memory usage and CPU time scale approximately linearly with this parameter.
+            </param>
+            <param name="parallel">
+                The level of parallelism, typically 1.
+                CPU time scales approximately linearly with this parameter.
+            </param>
+            <param name="maxThreads">
+                The maximum number of threads to spawn to derive the key.
+                This is limited by the <paramref name="parallel"/> value.
+                <c>null</c> will use as many threads as possible.
+            </param>
+            <returns>The effective salt.</returns>
+        </member>
+        <member name="M:CryptSharp.Utility.SCrypt.GetStream(System.Byte[],System.Byte[],System.Int32,System.Int32,System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Creates a derived key stream from which a derived key can be read.
+            </summary>
+            <param name="key">The key to derive from.</param>
+            <param name="salt">
+                The salt.
+                A unique salt means a unique scrypt stream, even if the original key is identical.
+            </param>
+            <param name="cost">
+                The cost parameter, typically a fairly large number such as 262144.
+                Memory usage and CPU time scale approximately linearly with this parameter.
+            </param>
+            <param name="blockSize">
+                The mixing block size, typically 8.
+                Memory usage and CPU time scale approximately linearly with this parameter.
+            </param>
+            <param name="parallel">
+                The level of parallelism, typically 1.
+                CPU time scales approximately linearly with this parameter.
+            </param>
+            <param name="maxThreads">
+                The maximum number of threads to spawn to derive the key.
+                This is limited by the <paramref name="parallel"/> value.
+                <c>null</c> will use as many threads as possible.
+            </param>
+            <returns>The derived key stream.</returns>
+        </member>
+        <member name="T:CryptSharp.Utility.Salsa20Core">
+            <summary>
+            Implements the Salsa20 hash function.
+            </summary>
+        </member>
+        <member name="M:CryptSharp.Utility.Salsa20Core.Compute(System.Int32,System.UInt32[],System.Int32,System.UInt32[],System.Int32)">
+            <summary>
+            Applies the Salsa20 hash function.
+            It maps a 16 element input to an output of the same size.
+            </summary>
+            <param name="rounds">The number of rounds. SCrypt uses 8.</param>
+            <param name="input">The input buffer.</param>
+            <param name="inputOffset">The offset into the input buffer.</param>
+            <param name="output">The output buffer.</param>
+            <param name="outputOffset">The offset into the output buffer.</param>
+        </member>
+        <member name="T:CryptSharp.Utility.Pbkdf2">
+             <summary>
+             Implements the PBKDF2 key derivation function.
+             </summary>
+             
+             <example>
+             <code title="Computing a Derived Key">
+             using System.Security.Cryptography;
+             using CryptSharp.Utility;
+             
+             // Compute a 128-byte derived key using HMAC-SHA256, 1000 iterations, and a given key and salt.
+             byte[] derivedKey = Pbkdf2.ComputeDerivedKey(new HMACSHA256(key), salt, 1000, 128);
+             </code>
+             <code title="Creating a Derived Key Stream">
+             using System.IO;
+             using System.Security.Cryptography;
+             using CryptSharp.Utility;
+            
+             // Create a stream using HMAC-SHA512, 1000 iterations, and a given key and salt.
+             Stream derivedKeyStream = new Pbkdf2(new HMACSHA512(key), salt, 1000);
+             </code>
+             </example>
+        </member>
+        <member name="M:CryptSharp.Utility.Pbkdf2.#ctor(System.Security.Cryptography.KeyedHashAlgorithm,System.Byte[],System.Int32)">
+            <summary>
+            Creates a new PBKDF2 stream.
+            </summary>
+            <param name="hmacAlgorithm">
+                The HMAC algorithm to use, for example <see cref="T:System.Security.Cryptography.HMACSHA256"/>.
+                Make sure to set <see cref="P:System.Security.Cryptography.KeyedHashAlgorithm.Key"/>.
+            </param>
+            <param name="salt">
+                The salt.
+                A unique salt means a unique PBKDF2 stream, even if the original key is identical.
+            </param>
+            <param name="iterations">The number of iterations to apply.</param>
+        </member>
+        <member name="M:CryptSharp.Utility.Pbkdf2.Read(System.Int32)">
+            <summary>
+            Reads from the derived key stream.
+            </summary>
+            <param name="count">The number of bytes to read.</param>
+            <returns>Bytes from the derived key stream.</returns>
+        </member>
+        <member name="M:CryptSharp.Utility.Pbkdf2.ComputeDerivedKey(System.Security.Cryptography.KeyedHashAlgorithm,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Computes a derived key.
+            </summary>
+            <param name="hmacAlgorithm">
+                The HMAC algorithm to use, for example <see cref="T:System.Security.Cryptography.HMACSHA256"/>.
+                Make sure to set <see cref="P:System.Security.Cryptography.KeyedHashAlgorithm.Key"/>.
+            </param>
+            <param name="salt">
+                The salt.
+                A unique salt means a unique derived key, even if the original key is identical.
+            </param>
+            <param name="iterations">The number of iterations to apply.</param>
+            <param name="derivedKeyLength">The desired length of the derived key.</param>
+            <returns>The derived key.</returns>
+        </member>
+        <member name="M:CryptSharp.Utility.Pbkdf2.Close">
+            <summary>
+            Closes the stream, clearing memory and disposing of the HMAC algorithm.
+            </summary>
+        </member>
+        <member name="M:CryptSharp.Utility.Pbkdf2.Flush">
+            <exclude />
+        </member>
+        <member name="M:CryptSharp.Utility.Pbkdf2.Read(System.Byte[],System.Int32,System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:CryptSharp.Utility.Pbkdf2.Seek(System.Int64,System.IO.SeekOrigin)">
+            <inheritdoc />
+        </member>
+        <member name="M:CryptSharp.Utility.Pbkdf2.SetLength(System.Int64)">
+            <exclude />
+        </member>
+        <member name="M:CryptSharp.Utility.Pbkdf2.Write(System.Byte[],System.Int32,System.Int32)">
+            <exclude />
+        </member>
+        <member name="P:CryptSharp.Utility.Pbkdf2.CanRead">
+            <exclude />
+        </member>
+        <member name="P:CryptSharp.Utility.Pbkdf2.CanSeek">
+            <exclude />
+        </member>
+        <member name="P:CryptSharp.Utility.Pbkdf2.CanWrite">
+            <exclude />
+        </member>
+        <member name="P:CryptSharp.Utility.Pbkdf2.Length">
+            <summary>
+            The maximum number of bytes that can be derived is 2^32-1 times the HMAC size.
+            </summary>
+        </member>
+        <member name="P:CryptSharp.Utility.Pbkdf2.Position">
+            <summary>
+            The position within the derived key stream.
+            </summary>
+        </member>
+    </members>
+</doc>

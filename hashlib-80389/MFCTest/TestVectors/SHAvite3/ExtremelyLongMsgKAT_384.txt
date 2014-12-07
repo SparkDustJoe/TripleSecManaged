@@ -1,0 +1,10 @@
+# ExtremelyLongMsgKAT_384.txt
+# Algorithm Name: SHAvite3
+# Principal Submitter: Eli Biham and Orr Dunkelman
+
+Repeat = 16777216
+Text = abcdefghbcdefghicdefghijdefghijkefghijklfghijklmghijklmnhijklmno
+MD = 77F2BB6589601865381782FBEE3237597D69BA7D05CEA8035E109F9C3EEFB8AC728C18F679968DD6BB1457FD2D909C51
+Repeat = 67108865
+Text = abcdefghbcdefghicdefghijdefghijkefghijklfghijklmghijklmnhijklmno
+MD = A123B1AB6EE522850133EEB97D1D065350575BE511F5F6C1B5F8E7CB5C54F8B87B4C86AF94BCD478B5C5B341E946FBC6
