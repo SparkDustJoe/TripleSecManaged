@@ -104,7 +104,7 @@ namespace Chaos.NaCl
                 blockOffset += 64;
                 internalKey.x8++;
             }
-            tempBytes.Wipe(); // DON'T LEAK!
+            CryptoBytes.Wipe(tempBytes); // DON'T LEAK!
         }
     }
 }
