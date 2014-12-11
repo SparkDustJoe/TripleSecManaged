@@ -7,6 +7,9 @@ namespace Chaos.NaCl
 {
     public static class XSalsa20
     {
+        // this class not in original Chaos.NaCl library
+        // added with Poly1305 scheme stripped off, specifically for TripleSec
+        
         public static readonly int KeySizeInBytes = 32;
         public static readonly int NonceSizeInBytes = 24;
 
@@ -87,7 +90,7 @@ namespace Chaos.NaCl
             PrepareInternalKey(out internalKey, key, keyOffset, nonce, nonceOffset);
 
             Array16<UInt32> temp;
-            var tempBytes = new byte[64];//todo: remove allocation
+            byte[] tempBytes = new byte[64];//todo: remove allocation
          
             int blockOffset = 0;
             while (blockOffset < messageLength)
@@ -101,6 +104,7 @@ namespace Chaos.NaCl
                 blockOffset += 64;
                 internalKey.x8++;
             }
+            tempBytes.Wipe(); // DON'T LEAK!
         }
     }
 }
