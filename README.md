@@ -3,6 +3,8 @@ TripleSecManaged
 
 a C# port of the TripleSec encryption scheme created by Chris Coyne, Maxwell Krohn, and Filippo Valsorda
 
+Implements v3 (and soon, v4)
+
 Initial Upload on Dec 7 2014
 
 Uses MS Visual Studio 2012 or later
