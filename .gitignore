@@ -3,3 +3,9 @@
 ################################################################################
 
 /.vs/TripleSecManaged/v15
+/TripleSecManaged/obj
+/Debug
+/TripleSecManaged/bin/x64/Debug
+/TripleSecTester/bin
+/TripleSecTester/obj
+/x64/Debug

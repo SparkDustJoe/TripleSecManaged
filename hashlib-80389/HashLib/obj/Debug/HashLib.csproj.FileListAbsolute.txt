@@ -1,4 +1,0 @@
-C:\DOTNET Programs\hashlib-80389\HashLib\bin\Debug\HashLib.dll
-C:\DOTNET Programs\hashlib-80389\HashLib\bin\Debug\HashLib.pdb
-C:\DOTNET Programs\hashlib-80389\HashLib\obj\Debug\HashLib.dll
-C:\DOTNET Programs\hashlib-80389\HashLib\obj\Debug\HashLib.pdb
