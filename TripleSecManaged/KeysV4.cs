@@ -178,9 +178,16 @@ namespace TripleSecManaged
                 _tempSalt = (byte[])Salt.Clone();
             lock (LOCKTHIS)
             {
-                byte[] KEYS = CryptSharp.Utility.SCrypt.ComputeDerivedKey(
+                // remove old SCRYPT reference
+                //byte[] KEYS = CryptSharp.Utility.SCrypt.ComputeDerivedKey(
+                //    PassphraseBytes, _tempSalt,
+                //    SCRYPT_CPU_COST, SCRYPT_BLOCKS, SCRYPT_PARALLEL_THREADS, SCRYPT_PARALLEL_THREADS, SCRYPT_OUTPUT_BYTES);
+
+                // add new SCryptManaged reference
+                byte[] KEYS = ScryptManaged.Scrypt.ComputeDerivedHash(
                     PassphraseBytes, _tempSalt,
-                    SCRYPT_CPU_COST, SCRYPT_BLOCKS, SCRYPT_PARALLEL_THREADS, SCRYPT_PARALLEL_THREADS, SCRYPT_OUTPUT_BYTES);
+                    SCRYPT_CPU_COST, SCRYPT_BLOCKS, SCRYPT_PARALLEL_THREADS, SCRYPT_OUTPUT_BYTES);
+
                 // USE THE FOLLOWING WITH EXTREME CAUTION, THE PASSPHRASE WILL BE CLEANED A LONG WAY UP THE HEAP!!!!
                 if (WipePassphrase) // WARNING: only do this if asked, as it will wipe ALL the way back up the call stack!!!!!
                     PassphraseBytes.Wipe(); // get it out of memory absolutely as soon as possible!
