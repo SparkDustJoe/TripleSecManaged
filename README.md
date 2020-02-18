@@ -15,5 +15,7 @@ Uses a modified version of Chaos.NaCl from GitHub (XSalsa20 class added without 
 Uses the Legion of the BouncyCastle C# library DLL 1.7 (for AES-CTR and Twofish-CTR (V3 only) mode encryption schemes;
   LoBC calls that mode SIC)  http://www.bouncycastle.org/csharp/
   
+See https://github.com/SparkDustJoe/SCryptManaged repository for SCrypt code not included here, but referenced. (this project no longer using nuget package for scrypt).  
+  
 All other code written by Dustin J. Sparks using reference material from the official TripleSec GitHub repository
   as guidance, both for the algorithm and the underlying methodology  https://github.com/keybase/triplesec
